@@ -1,0 +1,353 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: roboto, sans-serif, Arial;
+    margin: 10px;
+}
+
+ul > li {
+    list-style-type: none;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3, h3:focus {
+    font-size: 25px;
+    padding-left: 10px;
+    margin: 5px;
+
+    /*box-shadow: 5px 2px #ffa500;
+    width: 50%;*/
+}
+
+p {
+    font-size: 14px;
+}
+
+/************ fin ****************
+
+/**** Utilisation de CSS Grid pour disposer les blocs html **********************/
+.resume {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 2fr 1fr;
+    box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.35);
+    grid-column-gap: 15px;
+    grid-template-areas: "photo name" "titre about" "competence about" "competence skills" "work education";
+    padding: 0;
+    align-items: center;
+}
+
+.name {
+    grid-area: name;
+    background-color: #FAFAFA;
+    border-radius: 5% 1%;
+}
+
+.titre {
+    grid-area: titre;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.photo {
+    grid-area: photo;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.about {
+    grid-area: about;
+    background-image: linear-gradient(to bottom, #eeeeee, #f1f1f1, #f4f4f4, #f7f7f7, #fafafa);
+    border-radius: 5%;
+    margin-top: 100px;
+    margin-right: 10px;
+}
+
+.work {
+    grid-area: work;
+    background-image: linear-gradient(to bottom, #e1bee7, #d6cef6, #d1ddfc, #d5eafe, #e1f5fe);
+    margin-top: 10px;
+    margin-left: 5px;
+    padding-top: 10px;
+    margin-bottom: 5px;
+    border-radius: 5%;
+}
+
+.education {
+    grid-area: education;
+    grid-row-start: 2;
+    grid-row-end: 6;
+    margin-right: 10px;
+    padding-top: 10px;
+    background-image: linear-gradient(to bottom, #c5cae9, #ced2ec, #d6daf0, #dfe2f3, #e8eaf6);
+    border-radius: 5%;
+}
+
+.competence {
+    grid-area: competence;
+    background-image: linear-gradient(to bottom, #e1bee7, #d6cef6, #d1ddfc, #d5eafe, #e1f5fe);
+    border-radius: 5%;
+    margin-left: 5px;
+}
+
+.skills {
+    grid-area: skills;
+    background-image: linear-gradient(to bottom, #c5cae9, #ced2ec, #d6daf0, #dfe2f3, #e8eaf6);
+    border-radius: 5%;
+    margin-right: 10px;
+}
+
+/******** fin de la partie CSS Grid *******/
+/**** Zone identité, photo, about me ***/
+
+figure img {
+    border-radius: 50%;
+    border-color: 25px solid grey;
+    height: 100px;
+    width: 100px;
+    box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.35);
+}
+
+address {
+    padding: 5px;
+    margin: 5px;
+    font-size: 12px;
+}
+
+ul .identity {
+    padding-left: 0;
+    text-align: center;
+    height: auto;
+    width: 100%;
+}
+
+.identity {
+    list-style: none;
+    line-height: 1.5;
+}
+
+.firstname {
+    font-size: 15px;
+    color: black;
+}
+
+.phone_style {
+    color: #ffa500;
+}
+
+.mail {
+    text-decoration: none;
+    color: black;
+}
+
+.mail:active, .mail:focus, .mail:hover {
+    color: #ffa500;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    margin: 20px 25px;
+    color: black;
+    font-size: 35px;
+}
+
+h1:hover, h1:focus {
+    color: #ffa500;
+}
+
+.note {
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 30px;
+    border-radius: 10% 10%;
+    color: black;
+    line-height: 2;
+}
+
+/***** Fin de la zone identité ****/
+
+/***** Zone softskills ***********/
+
+.details_softskills {
+    list-style: circle;
+}
+
+.details_softskills > li {
+    margin-left: 25px;
+    padding: 5px 15px 5px 5px;
+}
+
+/**** Zone compétences *******/
+
+#details_competences {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5px;
+    justify-content: space-around;
+    padding: 5px;
+    width: 100%;
+}
+
+.card_competences {
+    padding-left: 0;
+}
+
+.anime {
+    background-color: white;
+}
+
+.card_competences > li {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 95%;
+    padding-top: 50px;
+    padding: 10px;
+    text-align: justify;
+    list-style: none;
+}
+
+#titre_competences1, #titre_competences2, #titre_competences3 {
+    background-color: #9575CD;
+    color: white;
+    font-size: bold;
+    text-align: center;
+    padding: 5px;
+}
+
+/**** Zone work *******************/
+
+.exp1, .exp2, .exp3, .exp4, .exp5, .exp6 {
+    border-top: 2px solid black;
+    width: 90%;
+}
+
+.stylework {
+    padding-left: 10px;
+}
+
+.work > h3 {
+    padding-left: 10px;
+}
+
+/**** Zone éducation ***************/
+
+/****** responsive *************************************************************************************/
+@media all and (max-width: 500px) {
+    .resume {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        /*justify-content: space-evenly;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        grid-template-areas: "titre" "name" "photo" "about" "skills" "competence" "work" "education";*/
+    }
+
+    .name {
+        width: 100%;
+        border-radius: 0%;
+        text-align: center;
+    }
+
+    h1 {
+        justify-content: center;
+        padding: 5px;
+        margin: 5px;
+        color: #ffa500;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .stylework {
+        display: flex;
+        flex-direction: column;
+        font-size: 20px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .stylework > li {
+        box-shadow: dimgrey;
+    }
+
+    h4.note, .stylenote {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        /*padding: 5px;
+        margin: 5px;*/
+    }
+
+    .skills {
+        margin: 15px;
+        padding: 15px;
+        width: 90%;
+    }
+
+    .details_softskills {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 5px;
+    }
+
+    .details_softskills > li {
+        font-size: 12px;
+        margin-left: 25px;
+        padding-left: 25px;
+        list-style-type: circle;
+    }
+
+    .competence {
+        margin-top: 5px;
+    }
+
+    #details_competences {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        padding-left: 0;
+        padding: 0;
+        white-space: wrap;
+    }
+
+    .card_competences {
+        padding-left: 0;
+    }
+
+    .anime:hover {
+        width: 90%;
+        transition: all .5s ease-in-out;
+    }
+
+    .work {
+        display: flex;
+        flex-direction: column;
+        margin: 10px;
+        padding-left: 0;
+        padding: 0;
+    }
+
+    .education {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px;
+        padding-top: 10px;
+    }
+
+    .styleformation > li {
+        font-size: 15px;
+    }
+
+}

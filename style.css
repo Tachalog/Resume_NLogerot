@@ -1,0 +1,268 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: roboto, sans-serif, Arial;
+    margin: 20px;
+    height: 100%;
+    /*background-color: grey;*/
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 25px;
+    padding-left: 10px;
+    margin: 5px;
+}
+
+p {
+    font-size: 14px;
+}
+
+@media all and (max-width: 768px) {
+    h3:focus, h3:hover {
+        box-shadow: 5px 2px #ffa500;
+        width: 95%;
+    }
+}
+
+/*  **************************************
+partie concernant le header */
+
+header {
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 18px;
+    width: 100%;
+}
+
+figure {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+figure img {
+    border-radius: 50%;
+    /*border-color:5px solid grey;*/
+    height: 100px;
+    width: 100px;
+}
+
+address {
+    padding: 5px;
+    margin: 5px;
+    font-size: 12px;
+}
+
+ul .identity {
+    padding-left: 0;
+    text-align: center;
+    height: auto;
+    width: 100%;
+}
+
+.identity {
+    list-style: none;
+    line-height: 1.5;
+}
+
+.firstname {
+    font-size: 15px;
+    color: black;
+}
+
+.phone_style {
+    color: #ffa500;
+}
+
+.mail {
+    text-decoration: none;
+    color: black;
+}
+
+.mail:active, .mail:focus {
+    color: #ffa500;
+}
+
+h1 {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    margin: 50px 25px;
+    color: black;
+}
+
+h1:active, h1:focus {
+    color: #ffa500;
+}
+
+.note {
+    font-size: 12px;
+    font-weight: normal;
+    margin-left: 30px;
+    border-radius: 10% 10%;
+    color: grey;
+    line-height: 2;
+    padding: 5px 10px;
+}
+
+/*** média queries : responsive de la partie header*/
+
+@media all and (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        width: 100%;
+    }
+
+    h1 {
+        justify-content: center;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    h4.note, .stylenote {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .identity {
+        padding-left: 0px;
+    }
+}
+
+/* fin de la partie du header *********************/
+
+/*
+main {
+    background-color: white;
+}*/
+
+/* zone softskills *********************************************************/
+
+aside {
+    /* border-bottom: thick solid #81D4FA;
+    background-color: brown;*/
+}
+
+.details_softskills {
+    display: inline-flex;
+    list-style: circle;
+}
+
+.details_softskills > li {
+    margin-left: 25px;
+    padding: 5px 15px 5px 5px;
+}
+
+/* Fin zone Soft skill */
+
+/*** media queries */
+@media all and (max-width: 768px) {
+    .details_softskills {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .details_softskills > li {
+        margin-left: 0;
+        font-size: 12px;
+    }
+}
+
+/**********************************************************************/
+
+/* Zone Compétences */
+
+#first {
+    /* border-bottom: thick solid #81D4FA;
+    background-color: cornflowerblue;*/
+}
+
+#details_competences {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5px;
+    justify-content: space-around;
+    padding: 5px;
+    width: 100%;
+}
+
+.card_competences {
+    padding-left: 0;
+}
+
+.card_competences > li {
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 95%;
+    padding-top: 50px;
+    padding: 10px;
+    text-align: justify;
+    list-style: none;
+}
+
+#titre_competences1, #titre_competences2, #titre_competences3 {
+    background-color: #ffa500;
+    font-size: bold;
+    text-align: center;
+
+    /*padding: 5px;*/
+}
+
+/*** media queries */
+@media all and (max-width: 768px) {
+    #details_competences {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+        padding-left: 0;
+        padding: 0;
+        white-space: wrap;
+    }
+
+    .card_competences {
+        padding-left: 0;
+    }
+
+    .anime:hover {
+        width: 90%;
+        transition: all .5s ease-in-out;
+    }
+}
+
+/* fin zone compétence *******************************************************/
+
+/** zone formation prof ***************************************************/
+
+#second {
+    /* border-bottom: thick solid #81D4FA;
+    background-color: darkgreen;*/
+}
+
+/* zone expérience professionnelle *******************************************/
