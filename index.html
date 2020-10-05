@@ -2,250 +2,78 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Curriculum Vitae de Natacha Logerot, présentation des compétences, soft skills et expériences">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-
-    <meta name="robots" content="index, follow">
-
-    <!-- Kit FontAwesome-->
-    <script src="https://kit.fontawesome.com/af947386fa.js" crossorigin="anonymous"></script>
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="">
-    <meta property="og:title" content="CV Natacha Logerot">
-    <meta property="og:description" content="Curriculum Vitae de Natacha Logerot, présentation des compétences, soft skills et expériences">
-    <meta property="og:image" content="./img/logo.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="">
-    <meta property="twitter:title" content="">
-    <meta property="twitter:description" content="Curriculum Vitae de Natacha Logerot, présentation des compétences, soft skills et expériences">
-    <meta property="twitter:image" content="./img/logo.png">
-
-
-
-    <title>CV Natacha Logerot</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Devis</title>
 </head>
-
 <body>
-    <header>
+    <h1>Exercice Devis : utilisation de JavaScript</h1>
 
-        <address>
+    <form method="post">
 
-            <figure>
-                    <img src="Images/NL2.jpg" alt="Photo de Natacha Logerot">
-            </figure>
+        <div id="client-data">
+            <legend>Information client : </legend>
+                <label for="nom">Nom :</label> <input type="text" name="nom" id="nom" placeholder="Entrez votre nom" size="50"/><br>
 
-            <ul class="identity">
-                <li class="firstname"><strong>Natacha LOGEROT</strong></li>
+                <label for="prenom">Prénom :</label> <input type="text" name="prenom" id="prenom" placeholder="Entrez votre prénom" size="50"/><br>
 
-                <li class="phone_style">Tel.: 06.47.60.02.58</li>
+                <label for="addresse">Adresse :</label>
+                <br />
+                <textarea name="addresse" id="addresse" cols="50" rows="5" placeholder="Entrez votre adresse"></textarea><br>
 
-                <li><a href="mailto:logerot.natacha@gmail.com" class="mail">E-mail : logerot.natacha@gmail.com</a></li>
-            </ul>
+                <label for="cp">Code Postal :</label> <input type="text" id="cp" size="10" placeholder="Code Postal" /><br>
 
-        </address>
+                <label for="ville">Ville :</label> <input type="text" name="ville" id="ville" placeholder="Entrez votre ville" size="50"/><br>
+        
+        </div>
+        
+        <div id="container-pdt">
+                <table>
+                <caption>Nos produits : </caption>    
+                    <tr>
+                        <th>Nom de l'article</th>
+                        <th>Prix</th>
+                    </tr>
+                    <tbody id="produits">
+                        <tr>
+                            <td id="ProduitA">Produit A</td>
+                            <td id="prixA">100</td>
+                        </tr>
+                        <tr>
+                            <td id="pdtlistB">Produit B</td>
+                            <td id="prixB">150</td>
+                        </tr>
+                        <tr>
+                            <td id="pdtlistC">Produit C</td>
+                            <td id="prixC">200</td>
+                        </tr>
+                        <tr>
+                            <td id="pdtlistD">Produit D</td>
+                            <td id="prixD">350</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-        <h1>Développeuse Web</h1>
+            <label for="selection" class="styleSelection">Votre sélection :</label>   
 
-            <article>
-                <h4 class="note">
-                    <span class="stylenote">+5 ans d'expérience en gestion de projet<br>
-                    Très bonnes capacités en communication et forte adaptabilité<br>
-                    Anglais opérationnel niveau intermédiaire</span>
-                </h4>
-            </article>
+            <select name="pdtoption" id="pdtoption">
+                <option value=" "></option>
+                <option value="Produit A">Produit A</option>
+                <option value="Produit B">Produit B</option>
+                <option value="Produit C">Produit C</option>
+                <option value="Produit D">Produit D</option>
+            </select>
+        
+            <label for="quantite" class="styleQuantite">Quantité :</label><input type="number" id="quantite" step="1" value="0" min="0" max="10">
+            <br>
+            <!--<label for="pxHt">Prix Unitaire :</label> <input type="text" id="pxHt" size="10" placeholder="Prix Unitaire" /><br>-->
 
-    </header>
+       </div>
+    </form> 
+    
+    <button class="btn" onclick="click">Générer</button>
 
-    <main>
-        <aside>
-            <h3>Soft skills </h3>
-                <ul class="details_softskills">
-                    <li>Organisation</li>
-                    <li>Confidentialité</li>
-                    <li>Ecoute</li>
-                    <li>Diplomatie</li>
-                    <li>Excellent relationnel</li>
-                    <li>Ouverture d'esprit</li>
-                </ul>
+       <script src="app.js"></script>
 
-        </aside>
-
-        <section id="first">
-
-            <h3>Compétences</h3>
-
-                <div id="details_competences">
-                    <ul class="card_competences">
-
-                        <li id="titre_competences1">Marketing</li>
-
-                        <li class="anime">Réalisation de bilan des actions marketing</li>
-                        <li class="anime">Proposition d'axes d'évolution</li>
-                        <li class="anime">Réalisation d'études marketing</li>
-                        <li class="anime">Participation aux phases créatives d'un projet marketing</li>
-                        <li class="anime">Animation de réunions techniques et administratives</li>
-                    </ul>
-
-                    <ul class="card_competences">
-                        <li id="titre_competences2">Gestion Data</li>
-
-                        <li class="anime">Création et administration de Base de donnée</li>
-                        <li class="anime">Automatisation des données statistiques</li>
-                        <li class="anime">Réalisation d'études, de tableaux comparatifs et scoring</li>
-                        <li class="anime">Réalisation de calcul de pondération</li>
-                        <li class="anime">Validation et cohérence des données</li>
-                    </ul>
-
-                    <ul class="card_competences">
-                        <li id="titre_competences3">Administratif</li>
-
-                        <li class="anime">Assistanat commercial et technique des collaborateurs</li>
-                        <li class="anime">Réalisation de la gestion des ressources humaines</li>
-                        <li class="anime">Reporting hebdomadaire</li>
-                        <li class="anime">Recherche et veille informationnelle</li>
-                        <li class="anime">Conduite d'une campagne d'e-mailing</li>
-                    </ul>
-                </div>
-        </section>
-
-        <section id="second">
-            <h3 class="cursus"><i class="fas fa-graduation-cap"></i> Formation</h3>
-
-            <ul class="">
-                <li>
-                    <p><strong>2018 - 2020 </strong></p>
-                
-                    <p><strong>OPENCLASSROOMS : "Développeur Web"</strong></p>
-
-                    <p>OpenClassrooms est un organisme de formation à distance qui permet à de nombreuses personnes
-                        d'acquérir de nouvelles connaissance et de nouvelles compétences dans divers secteurs.<br>
-                        Dans le cadre de ma formation, j'ai acquis les compétences en <strong>HTML/CSS/SEO-Accessibilité </strong>.<br> 
-                        Il me reste à acquérir le JavaScript, PHP, SQL.</p>
-                    
-                </li>
-
-                <li>
-                    <p><strong>1998 - 2000</strong></p>
-                
-                    <p><strong>Faculté de PARIS XII : Niveau DEUG AES (Administration Economique et Social</strong></p>
-
-                    <p>Université de l'Est de Paris. La formation AES permet d'acquérir les bases de connaissance
-                        qui ouvre la voie vers l'école d'administration nationale ou dans la gestion d'entreprise<br> (soit vers le
-                        management social soit vers le management opérationnel).</p>               
-                </li>
-            </ul>
-        </section>
-
-        <section class="experience">
-            <h3><i class="fas fa-briefcase"></i> Expériences Professionnelles</h3>
-
-            <ul>
-                <li>
-                    <div>
-                    <p><strong>Octobre 2018 - Mars 2019 Assistante projet<br>Paris</strong></p>
-                    </div>
-
-                    <div>
-                        <p><strong>Altédia LHH</strong></p>
-                        <p>Assistante projet</p>
-
-                        <p>Centralisation et collecte des données provenant des BU Territoires.
-                            Création de rapports de suivi des données (dashboard), suivi de la facturation.
-                            Mise en place d'une bibliothèque de documents.</p>
-                    </div>
-                </li>
-
-                <li>
-                    <div>
-                    <p><strong>Octobre 2015 - Mars 2017 Secrétaire Gestionnaire <br>Paris</strong></p>
-                    </div>
-
-                    <div>
-                        <p><strong>ICM (Institut du Cerveau et de la Moëlle épinière)</strong></p>
-                        <p>Secrétaire Gestionnaire</p>
-
-                        <p>Création de dashboard de l'activité de la plateforme Prisme.
-                            Refonte et administration des sites web de la plateforme Prisme et déploiement de la version
-                            anglaise.
-                            Gestion des réservations de salles d'expérimentation.
-                            Participation à la mise en place d'une base de données de volontaires.</p>
-                    </div>
-                </li>
-
-                <li>
-                    <div>
-                        <p><strong>Novembre 2014 - Janvier 2015 Chargée d'études <br>Boulogne-Billancourt</strong></p>
-                    </div>
-
-                    <div>
-                        <p><strong>A+A Research</strong></p>
-                        <p>Chef de projet - Chargée d'études</p>
-
-                        <p>Management d'études.
-                            Pharmacovigilance sur les études quantitatives et qualitatives.</p>
-                    </div>
-                </li>
-
-                <li>
-                    <div>
-                        <p><strong>Août 2013 - Janvier 2014 Assistante chef de projet <br>Créteil</strong></p>
-                    </div>
-
-                    <div>
-                        <p><strong>MGP (Mutuelle Générale de la Police)</strong></p>
-                        <p>Assistante chef de projet</p>
-
-                        <p>Assistance dans la rédaction du cahier des charges du projet "Acceptation Médicale".
-                            Accompagnement dans les projets "Bulle de confidentialité" et "Assistance à l'hospitalisation".
-                            Assistance sur le site intranet du service MOA, recette.</p>
-                    </div>
-                </li>
-
-                <li>
-                    <div>
-                    <p><strong>Juin 2010 - Janvier 2013 Chef de projet <br>Boulogne-Billancourt</strong></p>
-                    </div>
-
-                    <div>
-                        <p><strong>CSD Groupe Cegedim</strong></p>
-                        <p>Chef de projet</p>
-
-                        <p>Recherche, conception, validation de questionnaires métiers (CRF, Data Management).
-                            Définition de l'étude en fonction des marchés (respect des normes médicales sur les tests et
-                            diagnostiques).
-                            Interface entres les chargés d'études et le Service Informatique.
-                            Support opérationnel et technique (cahiers des charges en collaboration avec les ingénieurs
-                            informatique).
-                            Création de guides utipsateurs (français / anglais) et de Dashboard.</p>
-                    </div>
-                </li>
-
-                <li>
-                    <div>
-
-                        <p><strong>Juillet 2002 - Juin 2012 Chargée d'étude<br>Boulogne-Billancourt</strong></p>
-                    </div>
-
-                    <div >
-                        <p><strong >CSD Cegedim</strong></p>
-                        <p>Chargée d'étude</p>
-
-                        <p>Gestion de la collecte des données.
-                            Optimisation de la Newsletter interne sur les médicaments en pré-marketing.
-                            Amélioration des méthodes de travail (pagination automatique).
-                            Gestion de panel (quotas, argumentaire,...).
-                            Gestion et mise en place d'études Adhoc.</p>
-                    </div>
-                </li>
-            </ul>
-        </section>
-
-    </main>
 </body>
 </html>
